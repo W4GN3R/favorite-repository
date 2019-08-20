@@ -1,16 +1,23 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 
-import { AppRoutingModule } from './app-routing.module';
+import { Router } from "./app.routes";
 import { AppComponent } from './app.component';
+import { ListComponent } from './components/list/list.component';
+import { ApiRepositoryService } from './services/api-repository.service';
+import { LoginComponent } from './components/login/login.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ListComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    HttpClientModule,
+    Router
   ],
   providers: [],
   bootstrap: [AppComponent]
