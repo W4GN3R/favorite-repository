@@ -6,11 +6,6 @@ import { HttpClient } from '@angular/common/http';
 })
 export class ApiRepositoryService {
 
-
-  // list() {
-  //   return this.http.get<any[]>(`${this.Repository}`);
-  // }
-
   constructor(private http: HttpClient) {}
 
   list(token: string) {
