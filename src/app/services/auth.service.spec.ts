@@ -28,7 +28,7 @@ describe("AuthService", () => {
     });
 
     const req = httpMock.expectOne(
-      
+
       `${environment.api_host}/login/oauth/access_token`
     );
     expect(req.request.method).toBe("POST");
@@ -46,9 +46,4 @@ describe("AuthService", () => {
     expect(localStorage.getItem("currentToken")).toBeNull();
   });
 
-
-  it("should can access currentTokenValue", () => {
-    const service: AuthenticationService = TestBed.get(AuthenticationService);
-    expect(service.currentTokenValue).toBeTruthy();
-  });
 });
